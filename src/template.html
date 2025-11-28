@@ -1,21 +1,86 @@
 <!DOCTYPE html>
 
-<!-- (!) All comments start with the following character sequence `(!)` (excluding backticks), so that you can easily remove all of them by using the 'find' feature of your text editor. -->
-
-<!--
-(!) You may need to change the value of the `lang` attribute if the document is in a different language and/or dialect and/or writing system.
-    Refer to https://developer.mozilla.org/en-US/docs/Glossary/BCP_47_language_tag.
--->
 <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <!-- (!) You may need to change the document title. -->
-      <title>Document</title>
-  </head>
+        <title>Calculator</title>
+    </head>
 
-  <body>
-      
-  </body>
+    <body>
+        <main>
+            <div id="calculator">
+                <output for="keypad" id="display">0</output>
+
+                <div id="keypad">
+                  <div class="key-category" id="left-keypad">
+                      <!-- TODO: Remove the wrapper `div.row` elements if possible. -->
+                      <!-- TODO: Remove unnecessary style-unrelated classes, replacing them with `data-*` attribute-value pairs. -->
+                      
+                      <div class="row">
+                          <button type="button" class="key non-digit toggle" id="sign-toggle" disabled>±</button>
+                          <button type="button" class="key digit" disabled>0</button>
+                          <button type="button" class="key non-digit" id="radix-point">.</button>
+                      </div>
+
+                      <div class="row">
+                          <button type="button" class="key digit">1</button>
+                          <button type="button" class="key digit">2</button>
+                          <button type="button" class="key digit">3</button>
+                      </div>
+
+                      <div class="row">
+                          <button type="button" class="key digit">4</button>
+                          <button type="button" class="key digit">5</button>
+                          <button type="button" class="key digit">6</button>
+                      </div>
+
+                      <div class="row">
+                          <button type="button" class="key digit">7</button>
+                          <button type="button" class="key digit">8</button>
+                          <button type="button" class="key digit">9</button>
+                      </div>
+                  </div>
+
+                  <div class="key-category" id="right-keypad">
+                      <div class="key-category" id="calculate">
+                          <button type="button" class="key" id="is-equal-to" disabled>=</button>
+                      </div>
+
+                      <div class="key-category" id="operations">
+                          <div class="row">
+                              <button type="button" class="key operator" id="add">+</button>
+                              <button type="button" class="key operator" id="subtract">-</button>
+                          </div>
+
+                          <div class="row">
+                              <button type="button" class="key operator" id="multiply">×</button>
+                              <button type="button" class="key operator" id="divide">÷</button>
+                          </div>
+                      </div>
+
+                      <div class="key-category" id="input-modifiers">
+                          <button type="button" class="key input-modifier" id="backspace" disabled>⌫</button>
+                          <button type="button" class="key input-modifier" id="clear" disabled>CLR</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </main>
+
+        <footer>
+            <div class="info-box">
+                <div class="author-info">
+                    <div class="name">Ali Aboul-Sauood</div>
+
+                    <div class="github-profile" title="GitHub profile">
+                        <a href="https://github.com/ali-aboulsauood" target="_blank" rel="noopener noreferrer">
+                            <img src="images/logos/github-mark.png" alt="GitHub Invertocat Logo" width="24px" height="24px">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
 </html>
