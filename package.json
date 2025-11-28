@@ -1,0 +1,60 @@
+{
+  "name": "top-project-template",
+  "description": "A template repository for projects created with The Odin Project.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack serve --config webpack.dev.js",
+    "start:open-browser": "npm start -- --open",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ali-aboulsauood/TOP-Project-Template.git"
+  },
+  "keywords": [
+    "ali-mohammed",
+    "ali-aboulsauood",
+    "template-repository",
+    "template-repo",
+    "template-github-repository",
+    "template-github-repo",
+    "github-template-repository",
+    "github-template-repo",
+    "the-odin-project",
+    "top",
+    "the-odin-project-project-template",
+    "top-project-template",
+    "html-css-js",
+    "html-css-javascript",
+    "html",
+    "css",
+    "js",
+    "javascript",
+    "webpack",
+    "webpack-project",
+    "webpack-html-css-js",
+    "webpack-html-css-javascript"
+  ],
+  "author": "ali-aboulsauood <aliaboulsauood@tutamail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ali-aboulsauood/TOP-Project-Template/issues"
+  },
+  "homepage": "https://github.com/ali-aboulsauood/TOP-Project-Template#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "css-loader": "^7.1.2",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.4",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.102.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2",
+    "webpack-font-preload-plugin": "^1.5.0",
+    "webpack-merge": "^6.0.1"
+  }
+}

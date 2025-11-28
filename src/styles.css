@@ -1,0 +1,81 @@
+/* Fonts */
+
+/*
+Place font-related at-rules (e.g. `@font-face`, `@import`) here.
+
+For generating WOFF and WOFF2 font files with `@font-face` rules from other font file formats, Transfonter (https://www.transfonter.org/) is recommended.
+*/
+
+/* CSS Variables */
+:root {
+  /* Colors */
+
+  /* Place your color variables here. */
+
+  /* Fonts */
+
+  /* 
+  Sources for system font stacks:
+  (*) CSS Tricks' system font stack (last updated on October 26, 2022)
+      Useful when matching the user's operating system's font is desired.
+
+      https://www.css-tricks.com/snippets/css/system-font-stack/
+
+  (*) Modern Font Stacks: https://www.modernfontstacks.com/
+  (*) System Font Stacks: https://www.systemfontstack.com/
+
+  You may need to add and/or remove fonts to and/or from the stack and/or change the order of the fonts in the stack.
+  */
+
+  --system-font-stack: /* Place your system font stack here. */;
+}
+
+/* 
+Index of Styles
+---------------
+
+Place subsection names under section names.
+You may need to use different sections depending on your page layout.
+
+(0) General styles
+(1) Header styles
+(2) Main styles
+(3) Footer styles
+*/
+
+/* (0) General styles */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+*:focus, *:focus-visible {
+  outline: none;
+}
+
+*::selection {
+  /* Place selection style declarations here. */
+}
+
+button, input {
+  appearance: none;
+
+  border: none;
+  outline: none;
+
+  font: inherit;
+}
+
+body {
+
+}
+
+/* (1) Header styles */
+
+/* (2) Main styles */
+
+/* (3) Footer styles */
+
