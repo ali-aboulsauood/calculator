@@ -5,17 +5,25 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!-- TODO: Self-host the font WOFF and WOFF2 files, if that is more beneficial. -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
         <title>Calculator</title>
     </head>
 
     <body>
+      <!-- TODO: Add an `h1` element if that is more beneficial. -->
+
         <main>
             <div id="calculator">
-                <output for="keypad" id="display">0</output>
+                <!-- TODO: Use a more appropriate HTML element to represent th calculator display. -->
+                <div id="display">0</div>
 
                 <div id="keypad">
-                  <div class="key-category" id="left-keypad">
-                      <!-- TODO: Remove the wrapper `div.row` elements if possible. -->
+                  <div id="left-keypad">
                       <!-- TODO: Remove unnecessary style-unrelated classes, replacing them with `data-*` attribute-value pairs. -->
                       
                       <div class="row">
@@ -43,12 +51,12 @@
                       </div>
                   </div>
 
-                  <div class="key-category" id="right-keypad">
-                      <div class="key-category" id="calculate">
+                  <div id="right-keypad">
+                      <div id="calculate">
                           <button type="button" class="key" id="is-equal-to" disabled>=</button>
                       </div>
 
-                      <div class="key-category" id="operations">
+                      <div id="operations">
                           <div class="row">
                               <button type="button" class="key operator" id="add">+</button>
                               <button type="button" class="key operator" id="subtract">-</button>
@@ -60,25 +68,23 @@
                           </div>
                       </div>
 
-                      <div class="key-category" id="input-modifiers">
+                      <div id="input-modifiers">
                           <button type="button" class="key input-modifier" id="backspace" disabled>⌫</button>
                           <button type="button" class="key input-modifier" id="clear" disabled>CLR</button>
                       </div>
                   </div>
               </div>
-          </div>
+            </div>
         </main>
 
         <footer>
-            <div class="info-box">
-                <div class="author-info">
-                    <div class="name">Ali Aboul-Sauood</div>
+            <div id="author-info">
+                <div id="author-name">Ali Aboul-Sauood</div>
 
-                    <div class="github-profile" title="GitHub profile">
-                        <a href="https://github.com/ali-aboulsauood" target="_blank" rel="noopener noreferrer">
-                            <img src="images/logos/github-mark.png" alt="GitHub Invertocat Logo" width="24px" height="24px">
-                        </a>
-                    </div>
+                <div id="author-github-profile" title="GitHub profile">
+                    <a href="https://www.github.com/ali-aboulsauood" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/github-mark.png" alt="GitHub Invertocat Logo" width="24px" height="24px">
+                    </a>
                 </div>
             </div>
         </footer>

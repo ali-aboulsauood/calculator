@@ -1,49 +1,43 @@
-/* Fonts */
-
-/*
-Place font-related at-rules (e.g. `@font-face`, `@import`) here.
-
-For generating WOFF and WOFF2 font files with `@font-face` rules from other font file formats, Transfonter (https://www.transfonter.org/) is recommended.
-*/
-
-/* CSS Variables */
 :root {
   /* Colors */
 
-  /* Place your color variables here. */
+  --background-color: #101828;
+  --foreground-color: #E5E7EB;
+
+  --background-color-alternate: #1F2839;
+
+  --calculate-button-background-color: #00786F;
+  --delete-button-background-color: #82181A;
 
   /* Fonts */
 
-  /* 
-  Sources for system font stacks:
-  (*) CSS Tricks' system font stack (last updated on October 26, 2022)
-      Useful when matching the user's operating system's font is desired.
+  --text-font: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --code-font: Consolas, Monaco, "Ubuntu Mono", monospace;
 
-      https://www.css-tricks.com/snippets/css/system-font-stack/
+  /* Other */
 
-  (*) Modern Font Stacks: https://www.modernfontstacks.com/
-  (*) System Font Stacks: https://www.systemfontstack.com/
-
-  You may need to add and/or remove fonts to and/or from the stack and/or change the order of the fonts in the stack.
-  */
-
-  --system-font-stack: /* Place your system font stack here. */;
+  --border: 1px solid var(--foreground-color);
 }
 
 /* 
 Index of Styles
 ---------------
 
-Place subsection names under section names.
-You may need to use different sections depending on your page layout.
-
 (0) General styles
-(1) Header styles
-(2) Main styles
-(3) Footer styles
+    (0 - 1) Universal styles
+    (0 - 2) Element styles
+    (0 - 3) Body styles
+
+(1) Main styles
+    (1 - 1) Calculator styles
+            (1 - 1 - 1) Calculator key styles
+
+(2) Footer styles
 */
 
 /* (0) General styles */
+
+/* (0 - 1) Universal styles */
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -57,8 +51,10 @@ You may need to use different sections depending on your page layout.
 }
 
 *::selection {
-  /* Place selection style declarations here. */
+  background-color: var(--background-color-alternate);
 }
+
+/* (0 - 2) Element styles */
 
 button, input {
   appearance: none;
@@ -67,15 +63,190 @@ button, input {
   outline: none;
 
   font: inherit;
+  color: inherit;
 }
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* (0 - 3) Body styles */
 
 body {
+  --font-size: 24px;
 
+  display: grid;
+  grid-template-rows: 1fr min-content;
+
+  background-color: var(--background-color);
+  color: var(--foreground-color);
+
+  /* Inter - Regular */
+
+  font-family: var(--text-font);
+
+  font-style: normal;
+  font-weight: 400;
+  font-optical-sizing: auto;
+
+  font-size: var(--font-size);
+
+  height: 100vh;
 }
 
-/* (1) Header styles */
+/* (1) Main styles */
 
-/* (2) Main styles */
+main, footer {
+  display: grid;
+  place-content: center;
+}
 
-/* (3) Footer styles */
+/* (1 - 1) Calculator styles */
 
+#calculator {
+  border: var(--border);
+
+  box-shadow: 16px 16px 1px var(--background-color-alternate);
+}
+
+#display {
+  --calc-disp-padding-vertical: 8px;
+
+  background-color: var(--background-color-alternate);
+
+  border-bottom: var(--border);
+  padding: var(--calc-disp-padding-vertical) 8px;
+
+  box-shadow: var(--calc-disp-padding-vertical) calc(-1 * var(--calc-disp-padding-vertical)) var(--calc-disp-padding-vertical) var(--background-color) inset;
+
+  font-family: var(--code-font);
+  font-size: 80px;
+
+  text-align: right;
+}
+
+#display::selection {
+  background-color: var(--foreground-color);
+  color: var(--background-color);
+}
+
+#keypad {
+  display: flex;
+
+  gap: 24px;
+
+  padding: 32px;
+}
+
+#keypad > * {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#calculate {
+  /* Used to make the child button stretch across the container. */
+  display: flex;
+}
+
+/* (1 - 1 - 1) Calculator key styles */
+
+.key {
+  background-color: var(--background-color-alternate);
+
+  width: 64px;
+  height: 64px;
+
+  margin: 4px 2px;
+}
+
+.key:hover, .key:focus-visible {
+  opacity: 0.8;
+
+  border: var(--border);
+}
+
+.key.operator:hover {
+  background-color: var(--calculate-button-background-color);
+}
+
+.key:active:not(:disabled), .key.active {
+  /* `.active` is added/removed using JavaScript. */
+
+  background-color: var(--foreground-color);
+  color: var(--background-color);
+
+  opacity: 1.0;
+}
+
+.key:disabled {
+  opacity: 0.6;
+}
+
+#is-equal-to {
+  /* Allows the button to stretch across the container. */
+  flex: auto;
+
+  background-color: var(--calculate-button-background-color);
+}
+
+#input-modifiers > * {
+  background-color: var(--delete-button-background-color);
+}
+
+/* (2) Footer styles */
+
+footer {
+  padding-bottom: 64px;
+}
+
+#author-info {
+  --author-info-font-size: 1em;
+
+  display: flex;
+
+  border: var(--border);
+  padding: 16px;
+
+  font-size: var(--author-info-font-size);
+}
+
+#author-info > * {
+  --author-info-padding-horizontal: 16px;
+  --author-info-height: calc(var(--author-info-font-size) + 8px);
+
+  display: grid;
+  place-content: center;
+}
+
+#author-name {
+  border-right: var(--border);
+  padding-right: var(--author-info-padding-horizontal);
+
+  height: var(--author-info-height);
+}
+
+#author-github-profile {
+  border-left: var(--border);
+  padding-left: var(--author-info-padding-horizontal);
+
+  height: var(--author-info-height);
+}
+
+#author-github-profile > a {
+  display: grid;
+  place-items: center;
+}
+
+#author-github-profile > a:hover {
+  -webkit-filter: brightness(2);
+  filter: brightness(2);
+}
+
+#author-github-profile > a:active {
+  -webkit-filter: brightness(4);
+  filter: brightness(4);
+}
