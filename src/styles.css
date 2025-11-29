@@ -113,6 +113,8 @@ main, footer {
   box-shadow: 16px 16px 1px var(--background-color-alternate);
 }
 
+/* TODO: Create an algorithm that adjusts the width of the calculator display in characters (`ch`) and the padding of the keypad based on the font size of the calculator display. */
+
 #display {
   --calc-disp-padding-vertical: 8px;
 
@@ -124,9 +126,11 @@ main, footer {
   box-shadow: var(--calc-disp-padding-vertical) calc(-1 * var(--calc-disp-padding-vertical)) var(--calc-disp-padding-vertical) var(--background-color) inset;
 
   font-family: var(--code-font);
-  font-size: 80px;
+  font-size: 60px;
 
   text-align: right;
+
+  width: 15ch;
 }
 
 #display::selection {
@@ -136,10 +140,9 @@ main, footer {
 
 #keypad {
   display: flex;
+  justify-content: space-evenly;
 
-  gap: 24px;
-
-  padding: 32px;
+  padding: 32px 16px;
 }
 
 #keypad > * {
