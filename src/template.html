@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- TODO: Self-host the font WOFF and WOFF2 files, if that is more beneficial. -->
+        <!-- TODO: Self-host the variable WOFF2 font file. -->
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
     </head>
 
     <body>
-      <!-- TODO: Add an `h1` element if that is more beneficial. -->
+        <!-- TODO: Add an `h1` element, if that is more beneficial. -->
 
         <main>
             <div id="calculator">
@@ -23,57 +23,57 @@
                 <div id="display">0</div>
 
                 <div id="keypad">
-                  <div id="left-keypad">
-                      <!-- TODO: Remove unnecessary style-unrelated classes, replacing them with `data-*` attribute-value pairs. -->
-                      
-                      <div class="row">
-                          <button type="button" class="key non-digit toggle" id="sign-toggle" disabled>±</button>
-                          <button type="button" class="key digit" disabled>0</button>
-                          <button type="button" class="key non-digit" id="radix-point">.</button>
-                      </div>
+                    <div id="left-keypad">
+                        <!-- TODO: Remove unnecessary style-unrelated classes, replacing them with `data-*` attribute-value pairs. -->
 
-                      <div class="row">
-                          <button type="button" class="key digit">1</button>
-                          <button type="button" class="key digit">2</button>
-                          <button type="button" class="key digit">3</button>
-                      </div>
+                        <div class="row">
+                            <button type="button" class="key non-digit toggle" id="sign-toggle" disabled>±</button>
+                            <button type="button" class="key digit" disabled>0</button>
+                            <button type="button" class="key non-digit" id="radix-point">.</button>
+                        </div>
 
-                      <div class="row">
-                          <button type="button" class="key digit">4</button>
-                          <button type="button" class="key digit">5</button>
-                          <button type="button" class="key digit">6</button>
-                      </div>
+                        <div class="row">
+                            <button type="button" class="key digit">1</button>
+                            <button type="button" class="key digit">2</button>
+                            <button type="button" class="key digit">3</button>
+                        </div>
 
-                      <div class="row">
-                          <button type="button" class="key digit">7</button>
-                          <button type="button" class="key digit">8</button>
-                          <button type="button" class="key digit">9</button>
-                      </div>
-                  </div>
+                        <div class="row">
+                            <button type="button" class="key digit">4</button>
+                            <button type="button" class="key digit">5</button>
+                            <button type="button" class="key digit">6</button>
+                        </div>
 
-                  <div id="right-keypad">
-                      <div id="calculate">
-                          <button type="button" class="key" id="is-equal-to" disabled>=</button>
-                      </div>
+                        <div class="row">
+                            <button type="button" class="key digit">7</button>
+                            <button type="button" class="key digit">8</button>
+                            <button type="button" class="key digit">9</button>
+                        </div>
+                    </div>
 
-                      <div id="operations">
-                          <div class="row">
-                              <button type="button" class="key operator" id="add">+</button>
-                              <button type="button" class="key operator" id="subtract">-</button>
-                          </div>
+                    <div id="right-keypad">
+                        <div id="calculate">
+                            <button type="button" class="key" id="is-equal-to" disabled>=</button>
+                        </div>
 
-                          <div class="row">
-                              <button type="button" class="key operator" id="multiply">×</button>
-                              <button type="button" class="key operator" id="divide">÷</button>
-                          </div>
-                      </div>
+                        <div id="operations">
+                            <div class="row">
+                                <button type="button" class="key operator" id="add">+</button>
+                                <button type="button" class="key operator" id="subtract">-</button>
+                            </div>
 
-                      <div id="input-modifiers">
-                          <button type="button" class="key input-modifier" id="backspace" disabled>⌫</button>
-                          <button type="button" class="key input-modifier" id="clear" disabled>CLR</button>
-                      </div>
-                  </div>
-              </div>
+                            <div class="row">
+                                <button type="button" class="key operator" id="multiply">×</button>
+                                <button type="button" class="key operator" id="divide">÷</button>
+                            </div>
+                        </div>
+
+                        <div id="input-modifiers">
+                            <button type="button" class="key input-modifier" id="backspace" disabled>⌫</button>
+                            <button type="button" class="key input-modifier" id="clear" disabled>CLR</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
 
