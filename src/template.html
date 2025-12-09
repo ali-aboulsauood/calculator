@@ -23,12 +23,15 @@
 
                 <div id="keypad">
                     <div id="left-keypad">
-                        <!-- TODO: Remove unnecessary style-unrelated classes, replacing them with `data-*` attribute-value pairs. -->
+                        <!--
+                        Some classes included in the `class` attribute values for keys are not used for styling, but purely for scripting.
+                        They are kept there instead of for simplicity, and as they can become needed for styling.
+                        -->
 
                         <div class="row">
-                            <button type="button" class="key non-digit toggle" id="sign-toggle" disabled>±</button>
+                            <button type="button" id="sign-toggle" class="key non-digit toggle" disabled>±</button>
                             <button type="button" class="key digit" disabled>0</button>
-                            <button type="button" class="key non-digit" id="radix-point">.</button>
+                            <button type="button" id="radix-point" class="key non-digit">.</button>
                         </div>
 
                         <div class="row">
@@ -52,24 +55,24 @@
 
                     <div id="right-keypad">
                         <div id="calculate">
-                            <button type="button" class="key" id="is-equal-to" disabled>=</button>
+                            <button type="button" id="is-equal-to" class="key" disabled>=</button>
                         </div>
 
                         <div id="operations">
                             <div class="row">
-                                <button type="button" class="key operator" id="add">+</button>
-                                <button type="button" class="key operator" id="subtract">-</button>
+                                <button type="button" id="add" class="key operator">+</button>
+                                <button type="button" id="subtract" class="key operator">-</button>
                             </div>
 
                             <div class="row">
-                                <button type="button" class="key operator" id="multiply">×</button>
-                                <button type="button" class="key operator" id="divide">÷</button>
+                                <button type="button" id="multiply" class="key operator">×</button>
+                                <button type="button" id="divide" class="key operator">÷</button>
                             </div>
                         </div>
 
                         <div id="input-modifiers">
-                            <button type="button" class="key input-modifier" id="backspace" disabled>⌫</button>
-                            <button type="button" class="key input-modifier" id="clear" disabled>CLR</button>
+                            <button type="button" id="backspace" class="key input-modifier" disabled>⌫</button>
+                            <button type="button" id="clear" class="key input-modifier" disabled>CLR</button>
                         </div>
                     </div>
                 </div>
