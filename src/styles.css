@@ -136,6 +136,8 @@ main, footer {
 #display {
   --calc-disp-padding-vertical: 8px;
 
+  display: block;
+
   background-color: var(--background-color-alternate);
 
   border-bottom: var(--border);
@@ -148,7 +150,8 @@ main, footer {
 
   text-align: right;
 
-  width: 15ch;
+  /* The width of the container is one character (`1ch`) greater than the maximum allowed number of characters, to account for any overflows in case the last character is wider than `1ch`. */
+  width: calc(attr(data-maxlength ch) + 1ch);
 }
 
 #display::selection {
