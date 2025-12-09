@@ -141,7 +141,7 @@ main, footer {
   background-color: var(--background-color-alternate);
 
   border-bottom: var(--border);
-  padding: var(--calc-disp-padding-vertical) 8px;
+  padding: calc(var(--calc-disp-padding-vertical) + 1px) 8px;
 
   box-shadow: var(--calc-disp-padding-vertical) calc(-1 * var(--calc-disp-padding-vertical)) var(--calc-disp-padding-vertical) var(--background-color) inset;
 
