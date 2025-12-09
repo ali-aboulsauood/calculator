@@ -26,7 +26,8 @@ Index of Styles
 (0) General styles
     (0 - 1) Universal styles
     (0 - 2) Element styles
-    (0 - 3) Body styles
+    (0 - 3) Class styles
+    (0 - 4) Body styles
 
 (1) Main styles
     (1 - 1) Calculator styles
@@ -74,7 +75,24 @@ button:disabled {
   cursor: not-allowed;
 }
 
-/* (0 - 3) Body styles */
+/* (0 - 3) Class styles */
+
+.hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  margin: -1px;
+  padding: 0;
+  border: 0;
+
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
+}
+
+/* (0 - 4) Body styles */
 
 body {
   --font-size: 24px;
